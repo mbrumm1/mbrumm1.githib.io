@@ -1,0 +1,213 @@
+:root {
+    --color-home: #211c6a;
+    --color-about: #1e195f;
+    --color-projects: #1a1655;
+    --color-blog: #17144a;
+    --color-font: #fff;
+}
+
+/* :root {
+    --color-home: #a6a4c3;
+    --color-about: #bcbbd2;
+    --color-projects: #d3d2e1;
+    --color-blog: #e9e8f0;
+    --color-contact: #ffffff;
+    --color-font: #000;
+  } */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: var(--color-font);
+    font-family: 'gill sans', 'Helvetica';
+    height: 100%;
+}
+
+a {
+    color: var(--color-font);
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 2em;
+}
+
+.nav {
+    position: fixed;
+    z-index: 9999;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+
+.nav-list a {
+    display: block;
+    width: 100px;
+    padding: 2.5vh 0.8em;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list li::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to bottom right,
+            cyan,
+            magenta);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.nav-list li.active::after {
+    transition: opacity 300ms 350ms linear;
+    opacity: 1;
+}
+
+.nav-item-home {
+    background-color: var(--color-home);
+}
+
+.nav-item-about {
+    background-color: var(--color-about);
+}
+
+.nav-item-projects {
+    background-color: var(--color-projects);
+}
+
+.nav-item-blog {
+    background-color: var(--color-blog);
+}
+
+.nav-item-contact {
+    background-color: var(--color-contact);
+}
+
+.section-container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.section-container section {
+    min-width: 100vw;
+    scroll-snap-align: center;
+    padding: 20vh 10vh;
+    text-align: center;
+}
+
+.home {
+    background-color: var(--color-home);
+}
+
+.profile {
+    width: 300px;
+    aspect-ratio: 1;
+    background: linear-gradient(to bottom right,
+            cyan,
+            magenta);
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.about {
+    background-color: var(--color-about);
+}
+
+.about h3 {
+    position: absolute;
+    inset: 0;
+    top: 40%;
+    font-size: 28px;
+    letter-spacing: 0.6em;
+    font-size: clamp(6rem, 7rem, 8rem); 
+}
+
+.story-container {
+    position: relative;
+}
+
+.breakout {
+    margin: 0 calc(50% - 50vw);
+}
+
+.about .state {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom right,
+            cyan,
+            magenta);
+    margin-bottom: 10em;
+    object-fit: cover;
+    clip-path: polygon(0 10vw, 
+        100% 0, 
+        100% calc(100% - 10vw), 
+        0 100%);
+}
+
+#louisiana {
+    background: url('./images/louisiana.jpg');
+}
+
+.projects {
+    background-color: var(--color-projects);
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: center;
+}
+
+.project {
+    width: 40%;
+    min-width: 300px;
+    aspect-ratio: 1;
+    background: linear-gradient(to right bottom,
+            cyan,
+            magenta);
+}
+
+.project h3 {
+    text-align: center;
+    padding: 1.2em;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
+.project p {
+    padding: 6em 2em;
+    font-weight: 700;
+}
+
+.blog {
+    background-color: var(--color-blog);
+}
