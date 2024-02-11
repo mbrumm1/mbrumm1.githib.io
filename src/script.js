@@ -72,42 +72,13 @@ function move(event) {
   const x = event.pageX - sectionContainer.offsetLeft;
   const scroll = x - startX;
   sectionContainer.scrollLeft = scrollLeft - (scroll * 15);
-  console.log(x, scroll, sectionContainer.scrollLeft);
 }
 
-// const stateText = document.querySelector('.about h3');
-
-// function stateTextObserverCallback(entries, observer) {
-//   entries.forEach((entry) => {
-//     console.log(entry.boundingClientRect.y);
-//     if (entry.isIntersecting) {
-//       if (stateText.innerText === "LOUISIANA") {
-//         stateText.innerText = "WASHINGTON";
-//       }
-//       else {
-//         stateText.innerText = "LOUISIANA";
-//       }
-//     }
-//   });
-// }
-
-// const aboutSection = document.querySelector('.about');
-// console.log(aboutSection);
-// const stateTextObserverOptions = {
-//   root: aboutSection,
-//   threshold: 1
-// };
-
-// const stateTextObserver = new IntersectionObserver(
-//   stateTextObserverCallback, stateTextObserverOptions);
-// const bio = document.querySelector('.bio');
-// console.log(bio);
-// stateTextObserver.observe(bio);
 
 const aboutSection = document.querySelector('section.about');
 const stateText = aboutSection.querySelector('.about h3');
 aboutSection.addEventListener('scroll', (event) => {
-  if (event.target.scrollTop > 520) {
+  if (event.target.scrollTop > 600) {
     stateText.innerText = "WASHINGTON";
   }
   else {

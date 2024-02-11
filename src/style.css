@@ -121,6 +121,7 @@ h2 {
     padding: 20vh 10vh 0 10vh;
     text-align: center;
     overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .home {
@@ -173,16 +174,17 @@ h2 {
         100% 0, 
         100% calc(100% - 10vw), 
         0 100%);
-    margin-bottom: -150px;
+    margin-bottom: -200px;
     z-index: 2;
+    filter: brightness(50%);
 }   
 
 .bio {
     background-color: var(--color-about);
-    height: 500px;
+    height: 600px;
     z-index: 1000;
     position: relative;      
-    margin-bottom: -150px;
+    margin-bottom: -200px;
     clip-path: polygon(0 10vw, 
         100% 0, 
         100% calc(100% - 10vw), 
