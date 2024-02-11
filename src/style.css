@@ -118,7 +118,7 @@ h2 {
 .section-container section {
     min-width: 100vw;
     scroll-snap-align: center;
-    padding: 20vh 10vh 0 10vh;
+    padding-top: 20vh;
     text-align: center;
     overflow-y: scroll;
     scrollbar-width: none;
